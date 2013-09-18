@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.alex.googlemaps"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <permission
+        android:name="com.example.androidmapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" >
+    </permission>
+
+    <uses-permission android:name="com.alex.googlemaps.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="ParseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon_final"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.alex.googlemaps.Login_page"
+            android:label="@string/app_name"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.alex.googlemaps.G_Maps"
+            android:configChanges="screenSize|orientation" >
+        </activity>
+        <activity
+            android:name="com.alex.googlemaps.Friends_page"
+            android:configChanges="screenSize|orientation" >
+        </activity>
+        <activity
+            android:name="com.alex.googlemaps.LocmngrActivity"
+            android:configChanges="screenSize|orientation" >
+        </activity>
+        <activity
+            android:name="com.alex.googlemaps.MainPage"
+            android:configChanges="screenSize|orientation" >
+        </activity>
+        <activity
+            android:name="com.alex.googlemaps.Profile"
+            android:configChanges="screenSize|orientation" >
+        </activity>
+        <activity
+            android:name="com.alex.googlemaps.SignUp"
+            android:configChanges="screenSize|orientation"
+            android:noHistory="true" >
+        </activity>
+        <activity android:name=".DatabaseHandlerActivity" >
+        </activity>
+        <activity android:name="com.alex.googlemaps.Notification_new" >
+        </activity>
+        <activity android:name="com.alex.googlemaps.G_Maps_Friends" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyD-zPbxq6kH0cjw-Axfey-WZ3cmlXqf2LE" />
+    </application>
+
+</manifest>
